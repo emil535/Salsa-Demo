@@ -10,7 +10,12 @@
 import UIKit
 
 class ImageVC: UIViewController {
-
+ 
+    //  MARK: - Outlets
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var contentView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

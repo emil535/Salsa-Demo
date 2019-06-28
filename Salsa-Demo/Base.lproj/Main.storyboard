@@ -18,20 +18,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0597" translatesAutoresizingMaskIntoConstraints="NO" id="TAt-i2-K7G">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XcU-G8-6oT">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
-                            </imageView>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1Q-A0-dVl">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0597" translatesAutoresizingMaskIntoConstraints="NO" id="ibd-Ff-nU5">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="ibd-Ff-nU5" firstAttribute="top" secondItem="e1Q-A0-dVl" secondAttribute="top" id="Bcd-v3-WkL"/>
+                                            <constraint firstAttribute="trailing" secondItem="ibd-Ff-nU5" secondAttribute="trailing" id="HiT-wE-PQN"/>
+                                            <constraint firstItem="ibd-Ff-nU5" firstAttribute="leading" secondItem="e1Q-A0-dVl" secondAttribute="leading" id="jrE-c5-caU"/>
+                                            <constraint firstAttribute="bottom" secondItem="ibd-Ff-nU5" secondAttribute="bottom" id="mSA-rt-jSo"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="e1Q-A0-dVl" secondAttribute="trailing" id="3UI-lL-9yC"/>
+                                    <constraint firstItem="e1Q-A0-dVl" firstAttribute="top" secondItem="XcU-G8-6oT" secondAttribute="top" id="5pO-kR-uSw"/>
+                                    <constraint firstAttribute="bottom" secondItem="e1Q-A0-dVl" secondAttribute="bottom" id="Btn-Vw-AYC"/>
+                                    <constraint firstItem="e1Q-A0-dVl" firstAttribute="leading" secondItem="XcU-G8-6oT" secondAttribute="leading" id="peX-Ct-Is6"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TAt-i2-K7G" secondAttribute="bottom" id="8bC-G4-6IB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TAt-i2-K7G" secondAttribute="trailing" id="YNo-Vn-q7v"/>
-                            <constraint firstItem="TAt-i2-K7G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="usI-6L-e2w"/>
-                            <constraint firstItem="TAt-i2-K7G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wsy-tX-rSv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XcU-G8-6oT" secondAttribute="trailing" id="5ZT-y1-oKi"/>
+                            <constraint firstItem="XcU-G8-6oT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Te-H3-qYd"/>
+                            <constraint firstItem="e1Q-A0-dVl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="AOb-DK-6o3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XcU-G8-6oT" secondAttribute="bottom" id="vRv-KY-9Fq"/>
+                            <constraint firstItem="e1Q-A0-dVl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="vrX-wP-hJT"/>
+                            <constraint firstItem="XcU-G8-6oT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yff-zk-5dn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="CKg-94-4l7"/>
+                    <connections>
+                        <outlet property="contentView" destination="e1Q-A0-dVl" id="IuR-eb-ZGW"/>
+                        <outlet property="scrollView" destination="XcU-G8-6oT" id="bwb-bb-I3j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
