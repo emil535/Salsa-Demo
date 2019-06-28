@@ -9,10 +9,17 @@
 
 import UIKit
 
-class ImageVC: UIViewController {
+class ImageVC: UIViewController, UIScrollViewDelegate {
  
     //  MARK: - Outlets
     @IBOutlet weak var scrollView: UIScrollView!
+        { didSet{
+           scrollView.delegate = self
+           scrollView.minimumZoomScale = 0.5
+           scrollView.maximumZoomScale = 15.0
+        }
+        
+    }
     
     @IBOutlet weak var contentView: UIView!
     
@@ -22,7 +29,9 @@ class ImageVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return contentView
+    }
    
 
 }
