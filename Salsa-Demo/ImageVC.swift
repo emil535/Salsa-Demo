@@ -15,13 +15,17 @@ class ImageVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
         { didSet{
            scrollView.delegate = self
-           scrollView.minimumZoomScale = 0.5
-           scrollView.maximumZoomScale = 15.0
+           scrollView.minimumZoomScale = 1.0
+           scrollView.maximumZoomScale = 5.0
         }
         
     }
     
     @IBOutlet weak var contentView: UIView!
+    
+    @IBOutlet weak var largeImage: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
